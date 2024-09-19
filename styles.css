@@ -1,115 +1,197 @@
-/* General Styles */
+/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9;
     color: #333;
-    background-color: #f4f4f4;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-header {
-    background: #0056b3;
-    color: #fff;
-    padding: 15px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    margin: 0;
-    text-align: center;
-    font-size: 2.5em;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    margin: 10px 0 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s, border-bottom 0.3s;
-}
-
-nav ul li a:hover {
-    color: #e3e3e3;
-    border-bottom: 2px solid #e3e3e3;
-}
-
-section {
-    padding: 20px 0;
-    background: #fff;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    margin-top: 0;
-    color: #0056b3;
-    font-size: 2.2em;
-    text-align: center;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    padding: 10px 0;
-    font-size: 1.1em;
-    transition: background 0.3s, transform 0.3s;
-}
-
-ul li:hover {
-    background: #f0f0f0;
-    transform: translateX(10px);
-}
-
-p {
-    margin: 0 0 15px;
 }
 
 a {
-    color: #0056b3;
     text-decoration: none;
+    color: #0b5ed7;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Navbar */
+.navbar {
+    background-color: #0b5ed7;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffc107;
+}
+
+/* Banner Section */
+.banner {
+    background-color: #0098db;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom right, #0b5ed7, #0098db);
+}
+
+.banner h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: fadeInDown 1.5s;
+}
+
+.banner p {
+    font-size: 20px;
+    animation: fadeInUp 1.5s;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.about h2 {
+    color: #0b5ed7;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+.services {
+    background-color: #f4f4f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    color: #0b5ed7;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    color: #0b5ed7;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    color: #666;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #0b5ed7;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: #ffc107;
 }
 
 footer {
-    background: #0056b3;
-    color: #fff;
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 15px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    padding: 10px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffc107;
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 0;
 }
 
-/* FontAwesome Icons */
-.fas {
-    margin-right: 8px;
-    color: #0056b3;
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 100%;
+        max-width: 90%;
+    }
 }
